@@ -1,0 +1,217 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+}
+
+header {
+  background: #006064;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 { margin: 0; }
+header nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+header nav a:hover { text-decoration: underline; }
+
+.hero {
+  text-align: center;
+  padding: 50px;
+}
+.hero h2 { font-size: 28px; }
+.hero p { font-size: 18px; margin: 15px 0; }
+.hero .primary {
+  background: #006064;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: calc(100vh - 120px);
+}
+
+#map { width: 100%; height: 100%; }
+
+#bus-list {
+  overflow-y: auto;
+  background: white;
+  padding: 15px;
+}
+
+.bus-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: #fafafa;
+}
+.bus-name { font-weight: bold; margin-bottom: 5px; }
+.occupancy { margin: 5px 0; }
+.color-dot {
+  display: inline-block;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+button.primary {
+  background: #006064;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button.secondary {
+  background: #ddd;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+/* Modal overlay */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6); /* transparent dark background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* map se upar */
+}
+
+.modal.hidden {
+  display: none;
+}
+
+/* Modal box */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 320px;
+  max-width: 90%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.modal-content h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.modal-content button {
+  padding: 8px 14px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background: #0056b3;
+}
+
+/* QR result section */
+#ticket-result img {
+  max-width: 180px;
+  margin-top: 10px;
+}
+
+/* ---------- Login Page Styling ---------- */
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-container label {
+  text-align: left;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #34495e;
+}
+
+.login-container input[type="tel"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.login-container input[type="tel"]:focus {
+  border-color: #3498db;
+}
+
+.login-container button {
+  padding: 12px;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.login-container button:hover {
+  background: #2980b9;
+}
+
+.login-container p {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.login-container a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.login-container a:hover {
+  text-decoration: underline;
+}

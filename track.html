@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Track Buses</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Punjab Smart Bus Tracker</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="track.html">Track Buses</a>
+    </nav>
+  </header>
+
+  <main class="grid">
+    <!-- Map -->
+    <div id="map"></div>
+
+    <!-- Bus list -->
+    <div id="bus-list"></div>
+  </main>
+
+  <!-- Ticket Modal -->
+  <div id="ticket-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3 id="modal-title">Book Ticket</h3>
+      <form id="ticket-form">
+        <label>Passenger Name:</label>
+        <input type="text" id="passenger-name" required/>
+        <button type="button" class="primary" onclick="confirmBooking()">Confirm</button>
+      </form>
+      <div id="ticket-result" class="hidden"></div>
+      <button class="secondary" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Punjab Transport | Demo Prototype</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

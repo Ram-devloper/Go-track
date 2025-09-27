@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OnTrack – Smart Bus Tracking</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+  <!-- Intro Screen -->
+  <div id="intro" style="display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background:rgb(55, 102, 120);
+  color:rgba(255, 255, 255, 0.67);
+  font-size:2rem;">
+    <h1>OnTrack</h1>
+  </div>
+
+  <!-- Main App -->
+  <div id="app" style="display:none;">
+    <header>
+      <h1>OnTrack Bus Prototype</h1>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Track buses in real-time</h2>
+        <p>Live location, crowd estimation, arrival & departure times, and easy ticket booking with QR code.</p>
+        <a class="primary" href="login.html">Login</a>
+      </section>
+    </main>
+
+    <!-- Ticket Modal -->
+    <div id="ticket-modal" class="modal hidden">
+      <div class="modal-content">
+        <h3 id="modal-title"></h3>
+        <div id="ticket-form">
+          <input type="text" id="passenger-name" placeholder="Enter your name"/>
+          <button onclick="confirmBooking()">Confirm Booking</button>
+          <button onclick="closeModal()">Cancel</button>
+        </div>
+        <div id="ticket-result" class="hidden"></div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 Punjab Transport | Demo Prototype</p>
+    </footer>
+  </div>
+
+  <script>
+    // Intro screen 3 sec ke baad hide
+    setTimeout(() => {
+      document.getElementById("intro").style.display = "none";
+      document.getElementById("app").style.display = "block";
+    }, 3000);
+  </script>
+</body>
+</html>
